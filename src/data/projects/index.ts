@@ -2,6 +2,7 @@ import type { Locale } from "@/lib/i18n";
 import type { Project, ProjectCategory, ParticipationType } from "./types";
 import { sampleProjects } from "./samples";
 import { nbgMobileBanking } from "./entries/nbg-mobile-banking";
+import { pawera } from "./entries/pawera";
 
 export * from "./types";
 export * from "./taxonomy";
@@ -20,6 +21,7 @@ export * from "./taxonomy";
  * ─────────────────────────────────────────────────────────────────────────────
  */
 const registry: Project[] = [
+  pawera,
   nbgMobileBanking,
   ...sampleProjects,
 ];

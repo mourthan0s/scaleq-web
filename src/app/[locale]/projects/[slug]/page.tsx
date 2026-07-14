@@ -164,6 +164,17 @@ export default async function ProjectDetailPage({
             </p>
           )}
 
+          {project.logo && (
+            <div className="mt-8 inline-flex bg-paper p-3" aria-hidden="true">
+              <Image
+                src={project.logo}
+                alt=""
+                width={96}
+                height={110}
+                className="h-16 w-auto"
+              />
+            </div>
+          )}
           <h1 className="display mt-5 max-w-3xl text-3xl sm:text-5xl">{project.title[l]}</h1>
           <p className="mt-5 max-w-2xl leading-relaxed text-steel">
             {project.shortDescription[l]}
@@ -262,6 +273,59 @@ export default async function ProjectDetailPage({
               </div>
             </Reveal>
           ))}
+
+          {/* narrative chapters (flagship case studies) */}
+          {project.narrativeSections?.map((section) => (
+            <Reveal key={section.heading[l]}>
+              <div className="grid gap-4 border-b border-ink/10 py-10 lg:grid-cols-[280px_1fr] lg:gap-20">
+                <h2 className="display text-2xl">{section.heading[l]}</h2>
+                <div className="max-w-2xl space-y-4">
+                  {section.paragraphs[l].map((para, i) => (
+                    <p key={i} className="leading-relaxed text-slate">
+                      {para}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          ))}
+
+          {/* named gallery sections — render only when they have images */}
+          {project.allowScreenshots &&
+            project.gallerySections
+              ?.filter((section) => section.images.length > 0)
+              .map((section) => (
+                <Reveal key={section.key}>
+                  <div className="border-b border-ink/10 py-12">
+                    <div className="flex flex-wrap items-baseline justify-between gap-3">
+                      <h2 className="display text-2xl">{section.title[l]}</h2>
+                      {section.description && (
+                        <p className="max-w-xl text-sm leading-relaxed text-slate">
+                          {section.description[l]}
+                        </p>
+                      )}
+                    </div>
+                    <div className="mt-6 space-y-6">
+                      {section.images.map((img) => (
+                        <figure key={img.src} className="border border-ink/10 bg-ink p-4 sm:p-6">
+                          <div
+                            className="relative w-full overflow-hidden"
+                            style={{ aspectRatio: String(img.aspect ?? 8 / 5) }}
+                          >
+                            <Image
+                              src={img.src}
+                              alt={img.alt[l]}
+                              fill
+                              sizes="(min-width: 1280px) 1120px, 100vw"
+                              className="object-cover"
+                            />
+                          </div>
+                        </figure>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
 
           {/* gallery */}
           {(gallery.length > 0 || mobileShots.length > 0) && (

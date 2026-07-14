@@ -56,6 +56,7 @@ export const statusLabels: Record<ProjectStatus, Localized<string>> = {
   live: { el: "Σε λειτουργία", en: "Live" },
   completed: { el: "Ολοκληρωμένο", en: "Completed" },
   ongoing: { el: "Σε εξέλιξη", en: "Ongoing" },
+  "in-development": { el: "Σε ενεργή ανάπτυξη", en: "In active development" },
   archived: { el: "Αρχειοθετημένο", en: "Archived" },
 };
 

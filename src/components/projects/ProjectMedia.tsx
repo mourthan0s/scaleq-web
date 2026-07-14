@@ -38,7 +38,11 @@ export function ProjectMedia({
 
   if (cover) {
     return (
-      <div className="relative aspect-[8/5] w-full overflow-hidden">
+      <div
+        className="relative w-full overflow-hidden"
+        // Natural aspect (when provided) so multi-screen sheets are never cropped.
+        style={{ aspectRatio: String(cover.aspect ?? 8 / 5) }}
+      >
         <Image
           src={cover.src}
           alt={cover.alt[locale]}

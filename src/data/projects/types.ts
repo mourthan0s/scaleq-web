@@ -30,7 +30,12 @@ export type ProjectCategory =
   | "ai-automation"
   | "website";
 
-export type ProjectStatus = "live" | "completed" | "ongoing" | "archived";
+export type ProjectStatus =
+  | "live"
+  | "completed"
+  | "ongoing"
+  | "in-development"
+  | "archived";
 
 /**
  * How much of the project may be presented publicly:
@@ -47,10 +52,34 @@ export interface ProjectImage {
   src: string;
   alt: Localized<string>;
   kind: ProjectImageKind;
+  /**
+   * Width / height ratio of the image (e.g. 2032 / 1071). When set, the
+   * image renders at its natural aspect so nothing is cropped away —
+   * important for multi-screen design sheets.
+   */
+  aspect?: number;
   /** Official origin of the asset (App Store, official site, press kit …). */
   sourceUrl?: string;
   /** Attribution note — must also be recorded in ASSETS.md. */
   attribution?: string;
+}
+
+/**
+ * A named gallery section on the detail page (e.g. "Booking flow",
+ * "Admin panel", "Landing website"). Sections without images are not
+ * rendered, so future screenshots can be added incrementally by data alone.
+ */
+export interface GallerySection {
+  key: string;
+  title: Localized<string>;
+  description?: Localized<string>;
+  images: ProjectImage[];
+}
+
+/** A free-form narrative chapter (e.g. "User experience", "Architecture"). */
+export interface NarrativeSection {
+  heading: Localized<string>;
+  paragraphs: Localized<string[]>;
 }
 
 export interface ProjectLinks {
@@ -105,6 +134,8 @@ export interface Project {
   approach?: Localized<string>;
   solution?: Localized<string>;
   outcome?: Localized<string>;
+  /** Additional narrative chapters, rendered after challenge/approach/solution. */
+  narrativeSections?: NarrativeSection[];
 
   technologies: string[];
   /** e.g. ["Web", "iOS", "Android"]. */
@@ -113,8 +144,12 @@ export interface Project {
   integrations?: string[];
   deliveredSystems?: Localized<string[]>;
 
+  /** Product logo (path under /public) — shown on the detail hero if set. */
+  logo?: string;
   /** All imagery. Cover = images.find(kind === "cover"). */
   images: ProjectImage[];
+  /** Named galleries (booking flow, admin panel, …) — render only when filled. */
+  gallerySections?: GallerySection[];
   /** Generated in-house mockup shown when no real imagery is allowed/available. */
   fallbackMockup?: "dashboard" | "portal" | "commerce";
 
