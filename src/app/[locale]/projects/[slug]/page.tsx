@@ -336,7 +336,10 @@ export default async function ProjectDetailPage({
                   <div className="mt-6 grid gap-6 sm:grid-cols-2">
                     {gallery.map((img) => (
                       <figure key={img.src} className="border border-ink/10 bg-ink p-4">
-                        <div className="relative aspect-[8/5] w-full overflow-hidden">
+                        <div
+                          className="relative w-full overflow-hidden"
+                          style={{ aspectRatio: String(img.aspect ?? 8 / 5) }}
+                        >
                           <Image
                             src={img.src}
                             alt={img.alt[l]}

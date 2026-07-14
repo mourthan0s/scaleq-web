@@ -12,9 +12,10 @@ import type { Project } from "../types";
  * generator meta tags (verifiable through the Internet Archive snapshot of
  * 2023-01-07). No internal metrics or confidential details are included.
  *
- * Visuals: intentionally the in-house commerce mockup (allowScreenshots:
- * false) — the live site has since moved to a different platform, so current
- * screenshots would not represent the WordPress-era work described here.
+ * Visuals: official screenshots of www.mediastrom.com captured directly from
+ * the live site (July 2026) — per the client's continuity, the brand identity
+ * and storefront experience carry over from the platform generation this
+ * engagement concerns. Sources recorded in ASSETS.md.
  */
 export const mediaStromEcommerce: Project = {
   id: "media-strom-ecommerce",
@@ -108,7 +109,41 @@ export const mediaStromEcommerce: Project = {
   technologies: ["WordPress", "WooCommerce", "PHP", "JavaScript", "HTML", "CSS", "MySQL"],
   platforms: ["Web", "E-commerce"],
 
-  images: [],
+  images: [
+    {
+      src: "/projects/media-strom/home.jpg",
+      alt: {
+        el: "Η αρχική σελίδα του επίσημου ηλεκτρονικού καταστήματος της Media Strom",
+        en: "The homepage of the official Media Strom online store",
+      },
+      kind: "cover",
+      aspect: 2880 / 2000,
+      sourceUrl: "https://www.mediastrom.com/",
+      attribution: "Official website — © Media Strom",
+    },
+    {
+      src: "/projects/media-strom/category-stromata.jpg",
+      alt: {
+        el: "Κατηγορία «Στρώματα» με τις σειρές προϊόντων στο mediastrom.com",
+        en: "The “Mattresses” category with the product ranges on mediastrom.com",
+      },
+      kind: "desktop",
+      aspect: 2880 / 2000,
+      sourceUrl: "https://www.mediastrom.com/stromata",
+      attribution: "Official website — © Media Strom",
+    },
+    {
+      src: "/projects/media-strom/home-products.jpg",
+      alt: {
+        el: "Ενότητες προϊόντων και περιεχομένου στην αρχική σελίδα του mediastrom.com",
+        en: "Product and content sections on the mediastrom.com homepage",
+      },
+      kind: "desktop",
+      aspect: 2880 / 2000,
+      sourceUrl: "https://www.mediastrom.com/",
+      attribution: "Official website — © Media Strom",
+    },
+  ],
   fallbackMockup: "commerce",
 
   links: {
@@ -116,7 +151,7 @@ export const mediaStromEcommerce: Project = {
   },
 
   confidentiality: "public",
-  allowScreenshots: false,
+  allowScreenshots: true,
   disclaimer: {
     el: "Το έργο αποτελεί ιδιοκτησία της Media Strom. Η παρουσίασή του αφορά αποκλειστικά τη δική μου συμμετοχή στην ανάπτυξη συγκεκριμένων λειτουργιών ως μέλος της ομάδας ανάπτυξης. Όλα τα trademarks και copyrights ανήκουν στους αντίστοιχους ιδιοκτήτες.",
     en: "This project is the property of Media Strom. Its presentation here concerns solely my contribution to the development of specific functionality as a member of the development team. All trademarks and copyrights belong to their respective owners.",
