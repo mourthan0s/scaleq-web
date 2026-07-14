@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* SCALEQ palette — cold ink, warm paper, steel, champagne brass */
+  --color-ink: #0b0d11;
+  --color-ink-2: #12151b;
+  --color-ink-3: #1a1e27;
+  --color-paper: #f4f2ed;
+  --color-paper-2: #eae7df;
+  --color-steel: #9ba1ab;
+  --color-slate: #585d66;
+  --color-brass: #c6a15b;
+  --color-brass-soft: #dcc492;
+
+  --tracking-eyebrow: 0.18em;
 }
 
+/* Font tokens must be inline so utilities resolve the next/font variables
+   at the element where they are defined (on <body>). */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-source-serif), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-brass);
+  color: var(--color-ink);
+}
+
+/* Visible, consistent focus for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Architectural tick rail — the recurring measurement motif */
+.tick-rail {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    currentColor 0,
+    currentColor 1px,
+    transparent 1px,
+    transparent 24px
+  );
+  opacity: 0.25;
+  width: 8px;
+}
+
+/* Editorial display headings */
+.display {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.eyebrow {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+}
+
+/* Subtle structural dot grid on light sections — pure CSS, no external asset */
+.paper-surface {
+  background-color: var(--color-paper);
+  background-image: radial-gradient(rgb(11 13 17 / 0.028) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
