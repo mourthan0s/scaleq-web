@@ -21,9 +21,9 @@ import { getService } from "@/data/services";
 import { Reveal } from "@/components/ui/Reveal";
 import { CtaLink } from "@/components/ui/CtaLink";
 import { Container } from "@/components/ui/Container";
-import { ProjectMedia } from "@/components/projects/ProjectMedia";
+import { ProjectMedia, projectHeroMobileShots } from "@/components/projects/ProjectMedia";
 import { ProjectCard } from "@/components/projects/ProjectCard";
-import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema, caseStudySchema } from "@/components/seo/JsonLd";
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -88,8 +88,10 @@ export default async function ProjectDetailPage({
   const gallery = project.allowScreenshots
     ? project.images.filter((img) => img.kind === "gallery" || img.kind === "desktop")
     : [];
+  // Mobile shots already shown in the hero visual are not repeated below.
+  const heroMobileCount = projectHeroMobileShots(project).length;
   const mobileShots = project.allowScreenshots
-    ? project.images.filter((img) => img.kind === "mobile")
+    ? project.images.filter((img) => img.kind === "mobile").slice(heroMobileCount)
     : [];
 
   const disclaimer =
@@ -115,6 +117,18 @@ export default async function ProjectDetailPage({
           { name: projectsLabel, path: "/projects" },
           { name: project.title[l], path: `/projects/${project.slug}` },
         ])}
+      />
+      <JsonLd
+        data={caseStudySchema(l, {
+          title: project.title[l],
+          description: project.shortDescription[l],
+          path: `/projects/${project.slug}`,
+          organization: project.organization[l],
+          isMobileApp: project.category === "mobile-app",
+          collaborative: isCollaborative,
+          applicationCategory:
+            project.industryKey === "banking" ? "FinanceApplication" : undefined,
+        })}
       />
 
       {/* header */}

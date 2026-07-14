@@ -18,7 +18,11 @@ Every real project image must satisfy ALL of the following before it enters
 
 | Asset | Project | Source URL | Licence / basis of use | Used in |
 | --- | --- | --- | --- | --- |
-| _(none yet — real project assets will be registered here)_ | | | | |
+| `public/projects/nbg-mobile-banking/appstore-1.jpg` … `appstore-6.jpg` (6 files) | NBG Mobile Banking | Official App Store listing: https://apps.apple.com/gr/app/nbg-mobile-banking/id342152889 (retrieved via Apple's public iTunes API, images 1–6 of the listing, 1242×2208) | Official promotional screenshots published by National Bank of Greece S.A. on its App Store listing; used unaltered, with attribution and a trademark/ownership disclaimer, to illustrate a professional-contribution case study. © National Bank of Greece S.A. | `/projects/nbg-mobile-banking` (hero + gallery), projects listing, homepage Selected Work |
+
+Related official sources referenced (no assets copied):
+- Google Play listing: https://play.google.com/store/apps/details?id=mbanking.NBG
+- Official product page: https://www.nbg.gr/en/individuals/daily-transactions/digital-banking/mobile-banking
 
 ## Custom assets (created for this project — no external licence needed)
 
