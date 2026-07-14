@@ -26,8 +26,20 @@ Every real project image must satisfy ALL of the following before it enters
 | `public/projects/pawera/pet-management.png` | PawEra | Provided directly by the product owner (ORBIQ) — internal design material | Product design sheet (pets & profiles) supplied by ORBIQ; cropped only to remove editor chrome, UI unaltered. © ORBIQ. | PawEra "Pets & profiles" gallery |
 
 Related official sources referenced (no assets copied):
+
+**NBG Mobile Banking**
 - Google Play listing: https://play.google.com/store/apps/details?id=mbanking.NBG
 - Official product page: https://www.nbg.gr/en/individuals/daily-transactions/digital-banking/mobile-banking
+
+**Media Strom E-commerce Platform** — no imagery used; the case study renders
+the in-house commerce mockup because the live site has since migrated to a
+different platform, so current screenshots would not represent the
+WordPress-era work described. Public grounding for the platform claim:
+- Official website (current): https://www.mediastrom.com
+- Internet Archive snapshot of 2023-01-07 whose HTML carries
+  `<meta name="generator" content="WordPress 6.1.1">` and
+  `<meta name="generator" content="WooCommerce 7.1.1">`:
+  https://web.archive.org/web/20230107135447/https://www.mediastrom.com/
 
 ## Custom assets (created for this project — no external licence needed)
 
