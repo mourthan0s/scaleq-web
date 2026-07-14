@@ -1,6 +1,6 @@
 import type { Locale } from "@/lib/i18n";
 import { homeContent } from "@/content/home";
-import { techGroups } from "@/data/technology";
+import { techGroups, techPrinciple } from "@/data/technology";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -39,6 +39,14 @@ export function TechnologySection({ locale }: { locale: Locale }) {
             </div>
           </Reveal>
         ))}
+
+        <Reveal>
+          <div className="border-t border-steel/15 pt-8">
+            <p className="max-w-2xl border-l-2 border-brass pl-5 text-sm leading-relaxed text-steel">
+              {techPrinciple[locale]}
+            </p>
+          </div>
+        </Reveal>
       </div>
     </Section>
   );

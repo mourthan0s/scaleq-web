@@ -2,6 +2,24 @@
 
 Register of every visual asset used on the SCALEQ website.
 
+## Project / case-study assets — process & register
+
+Every real project image must satisfy ALL of the following before it enters
+`public/projects/<slug>/`:
+
+1. It comes from an **official source only**: the official website, App Store /
+   Google Play listing, official press kit, official organization pages or
+   official public presentations. Never random blogs or unauthorised captures.
+2. Its origin is unambiguous. If provenance is unclear → the asset is not used.
+3. Its `sourceUrl` (and attribution, where applicable) is recorded on the
+   `ProjectImage` entry in the project data file **and** in the table below.
+4. Confidential / restricted projects use the in-house generated device
+   mockups (`allowScreenshots: false`) instead of real UI.
+
+| Asset | Project | Source URL | Licence / basis of use | Used in |
+| --- | --- | --- | --- | --- |
+| _(none yet — real project assets will be registered here)_ | | | | |
+
 ## Custom assets (created for this project — no external licence needed)
 
 | Asset | Location | Used in |

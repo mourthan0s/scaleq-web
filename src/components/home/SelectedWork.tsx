@@ -1,17 +1,18 @@
 import Link from "next/link";
 import { localeHref, type Locale } from "@/lib/i18n";
 import { homeContent } from "@/content/home";
-import { projects } from "@/data/projects";
+import { getFeaturedProjects, participationInfo } from "@/data/projects";
 import { Reveal } from "@/components/ui/Reveal";
 import { CtaLink } from "@/components/ui/CtaLink";
-import { DeviceMockup } from "@/components/graphics/DeviceMockup";
+import { ProjectMedia } from "@/components/projects/ProjectMedia";
 
 /**
- * Selected work — data-driven case studies with generated interface mockups.
+ * Selected work — the featured projects from the data-driven registry.
  * Sample entries carry a visible "demonstration" badge until real cases land.
  */
 export function SelectedWork({ locale }: { locale: Locale }) {
   const t = homeContent[locale].work;
+  const featured = getFeaturedProjects(3);
 
   return (
     <section className="paper-surface text-ink">
@@ -28,7 +29,7 @@ export function SelectedWork({ locale }: { locale: Locale }) {
         </Reveal>
 
         <div className="mt-14 space-y-20">
-          {projects.map((p, i) => (
+          {featured.map((p, i) => (
             <Reveal key={p.slug}>
               <article
                 className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${
@@ -40,14 +41,19 @@ export function SelectedWork({ locale }: { locale: Locale }) {
                   className="group block border border-ink/10 bg-ink p-6 transition-transform duration-500 hover:-translate-y-1 sm:p-8"
                   aria-label={p.title[locale]}
                 >
-                  <DeviceMockup variant={p.mockup} title={p.title[locale]} />
+                  <ProjectMedia project={p} locale={locale} />
                 </Link>
                 <div>
-                  {p.isSample && (
-                    <p className="eyebrow mb-4 inline-block border border-ink/20 px-3 py-1.5 text-slate">
-                      {t.sampleBadge}
-                    </p>
-                  )}
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    <span className="eyebrow inline-block border border-ink/20 px-3 py-1.5 text-slate">
+                      {participationInfo[p.participation].label[locale]}
+                    </span>
+                    {p.isSample && (
+                      <span className="eyebrow inline-block border border-dashed border-ink/25 px-3 py-1.5 text-slate/80">
+                        {t.sampleBadge}
+                      </span>
+                    )}
+                  </div>
                   <p className="eyebrow text-brass">{p.industry[locale]}</p>
                   <h3 className="display mt-3 text-2xl sm:text-3xl">
                     <Link
@@ -57,7 +63,9 @@ export function SelectedWork({ locale }: { locale: Locale }) {
                       {p.title[locale]}
                     </Link>
                   </h3>
-                  <p className="mt-4 max-w-lg leading-relaxed text-slate">{p.challenge[locale]}</p>
+                  <p className="mt-4 max-w-lg leading-relaxed text-slate">
+                    {p.shortDescription[locale]}
+                  </p>
                   <ul className="mt-6 flex flex-wrap gap-2" aria-label="Technologies">
                     {p.technologies.slice(0, 4).map((tech) => (
                       <li key={tech} className="eyebrow border border-ink/15 px-2.5 py-1 text-slate">

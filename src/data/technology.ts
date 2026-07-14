@@ -1,5 +1,13 @@
 import type { Localized } from "@/lib/types";
 
+/**
+ * The SCALEQ technology ecosystem, organised as architectural layers —
+ * the same measurement-rail logic used across the site (L1…L6).
+ *
+ * The list is indicative, not exhaustive: technology is chosen per
+ * engagement based on requirements, existing infrastructure and goals.
+ * That principle is stated in the UI (see `techPrinciple` below).
+ */
 export interface TechGroup {
   key: string;
   title: Localized<string>;
@@ -9,48 +17,116 @@ export interface TechGroup {
 
 export const techGroups: TechGroup[] = [
   {
-    key: "interfaces",
-    title: { el: "Interfaces", en: "Interfaces" },
+    key: "frontend",
+    title: { el: "Frontend", en: "Frontend" },
     note: {
-      el: "Web και mobile εμπειρίες για πελάτες, συνεργάτες και ομάδες.",
-      en: "Web and mobile experiences for customers, partners and teams.",
+      el: "Web interfaces που είναι γρήγορα, προσβάσιμα και συντηρήσιμα.",
+      en: "Web interfaces that are fast, accessible and maintainable.",
     },
-    items: ["Next.js", "React", "React Native", "Angular", "TypeScript", "Kotlin"],
+    items: [
+      "React",
+      "Next.js",
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+    ],
   },
   {
-    key: "backbone",
-    title: { el: "Backbone", en: "Backbone" },
+    key: "mobile",
+    title: { el: "Mobile", en: "Mobile" },
     note: {
-      el: "Η λογική και τα δεδομένα πίσω από κάθε σύστημα.",
-      en: "The logic and data behind every system.",
+      el: "Εφαρμογές για iOS και Android — cross-platform ή native, ανάλογα με το έργο.",
+      en: "Apps for iOS and Android — cross-platform or native, depending on the project.",
     },
-    items: ["Node.js", "REST & GraphQL APIs", "PostgreSQL", "MySQL", "Redis"],
+    items: [
+      "React Native",
+      "Expo",
+      "Kotlin",
+      "Swift",
+      "Android",
+      "iOS",
+      "Cross-platform delivery",
+    ],
   },
   {
-    key: "infrastructure",
-    title: { el: "Infrastructure", en: "Infrastructure" },
+    key: "backend",
+    title: { el: "Backend & Data", en: "Backend & Data" },
     note: {
-      el: "Φιλοξενία, ασφάλεια και παρακολούθηση σε cloud υποδομές.",
-      en: "Hosting, security and monitoring on cloud infrastructure.",
+      el: "Η λογική, τα APIs και τα δεδομένα πίσω από κάθε σύστημα.",
+      en: "The logic, APIs and data behind every system.",
     },
-    items: ["Cloud hosting", "CI/CD", "Monitoring", "Backups & security"],
+    items: [
+      "Node.js",
+      "Java",
+      "Kotlin",
+      "REST APIs",
+      "GraphQL",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Firebase",
+      "Supabase",
+    ],
   },
   {
-    key: "intelligence",
-    title: { el: "Intelligence", en: "Intelligence" },
+    key: "cms-commerce",
+    title: { el: "CMS & E-commerce", en: "CMS & E-commerce" },
     note: {
-      el: "Αυτοματισμοί, AI integrations και δεδομένα που γίνονται αποφάσεις.",
-      en: "Automation, AI integrations and data turned into decisions.",
+      el: "Διαχείριση περιεχομένου και πωλήσεων — από έτοιμες πλατφόρμες έως πλήρως custom λύσεις.",
+      en: "Content and commerce management — from established platforms to fully custom builds.",
     },
-    items: ["AI integrations", "Workflow automation", "Analytics", "Reporting pipelines"],
+    items: [
+      "WordPress",
+      "WooCommerce",
+      "Shopify",
+      "Headless CMS",
+      "Custom CMS solutions",
+    ],
   },
   {
-    key: "commerce",
-    title: { el: "Commerce & Connections", en: "Commerce & Connections" },
+    key: "cloud",
+    title: { el: "Cloud & Infrastructure", en: "Cloud & Infrastructure" },
     note: {
-      el: "Πληρωμές, παραγγελίες και συνδέσεις με τρίτα συστήματα.",
-      en: "Payments, ordering and connections to third-party systems.",
+      el: "Φιλοξενία, αυτοματοποιημένα deployments, ασφάλεια και παρακολούθηση.",
+      en: "Hosting, automated deployments, security and monitoring.",
     },
-    items: ["Payment systems", "ERP / CRM integrations", "Courier & logistics APIs", "Third-party APIs"],
+    items: [
+      "AWS",
+      "Google Cloud",
+      "Azure",
+      "Docker",
+      "CI/CD",
+      "GitHub Actions",
+      "Monitoring & backups",
+    ],
+  },
+  {
+    key: "integrations",
+    title: { el: "Integrations & Intelligence", en: "Integrations & Intelligence" },
+    note: {
+      el: "Πληρωμές, τρίτα συστήματα, analytics, αυτοματισμοί και AI — εκεί όπου τα συστήματα γίνονται οικοσύστημα.",
+      en: "Payments, third-party systems, analytics, automation and AI — where systems become an ecosystem.",
+    },
+    items: [
+      "Stripe",
+      "Payment integrations",
+      "Third-party APIs",
+      "ERP / CRM integrations",
+      "Analytics platforms",
+      "AI integrations",
+      "Automation tools",
+    ],
   },
 ];
+
+/**
+ * The honest framing that accompanies the stack wherever it is shown:
+ * no fake exhaustiveness, no implied certifications or partnerships.
+ */
+export const techPrinciple: Localized<string> = {
+  el: "Η λίστα είναι ενδεικτική, όχι περιοριστική. Η τεχνολογία επιλέγεται ανά έργο — με κριτήριο τις απαιτήσεις, την υπάρχουσα υποδομή, την ομάδα που θα το συντηρήσει και τους στόχους της επιχείρησης. Ποτέ το αντίστροφο.",
+  en: "The list is indicative, not restrictive. Technology is chosen per engagement — based on the requirements, the existing infrastructure, the team that will maintain it and the goals of the business. Never the other way around.",
+};
