@@ -4,6 +4,7 @@ import { sampleProjects } from "./samples";
 import { nbgMobileBanking } from "./entries/nbg-mobile-banking";
 import { pawera } from "./entries/pawera";
 import { mediaStromEcommerce } from "./entries/media-strom";
+import { orlikGallery } from "./entries/orlik-gallery";
 
 export * from "./types";
 export * from "./taxonomy";
@@ -24,6 +25,7 @@ export * from "./taxonomy";
 const registry: Project[] = [
   pawera,
   nbgMobileBanking,
+  orlikGallery,
   mediaStromEcommerce,
   ...sampleProjects,
 ];
