@@ -2,6 +2,7 @@ import type { Locale } from "@/lib/i18n";
 import type { Project, ProjectCategory, ParticipationType } from "./types";
 import { sampleProjects } from "./samples";
 import { nbgMobileBanking } from "./entries/nbg-mobile-banking";
+import { nbgNext } from "./entries/nbg-next";
 import { pawera } from "./entries/pawera";
 import { mediaStromEcommerce } from "./entries/media-strom";
 import { orlikGallery } from "./entries/orlik-gallery";
@@ -25,6 +26,7 @@ export * from "./taxonomy";
 const registry: Project[] = [
   pawera,
   nbgMobileBanking,
+  nbgNext,
   orlikGallery,
   mediaStromEcommerce,
   ...sampleProjects,
