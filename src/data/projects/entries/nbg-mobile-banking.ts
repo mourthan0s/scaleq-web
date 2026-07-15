@@ -23,8 +23,8 @@ export const nbgMobileBanking: Project = {
     en: "NBG Mobile Banking",
   },
   shortDescription: {
-    el: "Συμμετοχή στην ανάπτυξη της εφαρμογής mobile banking της Εθνικής Τράπεζας της Ελλάδος — μίας από τις κορυφαίες τραπεζικές εφαρμογές στην Ελλάδα — ως React Native engineer σε ευρύτερη ομάδα ανάπτυξης.",
-    en: "Contribution to the National Bank of Greece mobile banking app — one of the leading banking apps in Greece — as a React Native engineer within a wider development team.",
+    el: "Συμμετοχή στην ανάπτυξη της εφαρμογής mobile banking της Εθνικής Τράπεζας της Ελλάδος — με εξειδίκευση σε πληρωμές, συναλλαγές, IRIS Payments και κοινή mobile πλατφόρμα — ως React Native engineer σε ευρύτερη ομάδα ανάπτυξης.",
+    en: "Contribution to the National Bank of Greece mobile banking app — specialising in payments, transactions, IRIS Payments and the shared mobile platform — as a React Native engineer within a wider development team.",
   },
   description: {
     el: [
@@ -54,30 +54,134 @@ export const nbgMobileBanking: Project = {
     el: "React Native Software Engineer",
     en: "React Native Software Engineer",
   },
+  specialization: {
+    el: "Εξειδίκευση: Payments, Transactions & Shared Mobile Platform Architecture",
+    en: "Specialisation: Payments, Transactions & Shared Mobile Platform Architecture",
+  },
   teamContext: {
     el: "Μέλος της ευρύτερης ομάδας ανάπτυξης της εφαρμογής, σε συνεργασία με μηχανικούς πολλαπλών ειδικοτήτων.",
     en: "Member of the app's wider development team, working alongside engineers of multiple specialisations.",
   },
-  responsibilities: {
-    el: [
-      "Ανάπτυξη και βελτίωση λειτουργιών της εφαρμογής",
-      "Υλοποίηση UI σε React Native",
-      "Business logic σε TypeScript / JavaScript",
-      "Integrations με REST APIs",
-      "Συμμετοχή στη συνεχή εξέλιξη και συντήρηση της εφαρμογής",
-    ],
-    en: [
-      "Developing and improving application features",
-      "UI implementation in React Native",
-      "Business logic in TypeScript / JavaScript",
-      "REST API integrations",
-      "Participation in the app's continuous evolution and maintenance",
-    ],
-  },
   contributionSummary: {
-    el: "Συμμετέχω στην ανάπτυξη και τη συνεχή εξέλιξη της εφαρμογής ως μέλος της ομάδας ανάπτυξης — υλοποιώντας και βελτιώνοντας λειτουργίες, UI, business logic και integrations, σε συνεργασία με μεγαλύτερη ομάδα μηχανικών.",
-    en: "I contribute to the development and continuous evolution of the app as a member of its development team — building and improving features, UI, business logic and integrations, in collaboration with a larger engineering team.",
+    el: "Συμμετέχω ενεργά στην ανάπτυξη του NBG Mobile Banking ως μέλος της ομάδας ανάπτυξης, με εξειδίκευση στις ροές πληρωμών και συναλλαγών, στο IRIS domain και στην κοινή mobile πλατφόρμα της εφαρμογής — σε συνεργασία με μεγαλύτερη ομάδα μηχανικών.",
+    en: "I actively contribute to the development of NBG Mobile Banking as a member of its development team, specialising in payment and transaction flows, the IRIS domain and the app's shared mobile platform — in collaboration with a larger engineering team.",
   },
+  contributionAreas: [
+    {
+      heading: { el: "Πληρωμές & Συναλλαγές", en: "Payments & Transactions" },
+      standing: { el: "Βασικός μηχανικός ανάπτυξης", en: "Core contributor" },
+      summary: {
+        el: "Εξειδίκευση στην ανάπτυξη και εξέλιξη των ροών πληρωμών και συναλλαγών του mobile banking, σε συνεργασία με την ευρύτερη ομάδα του payment domain.",
+        en: "Specialised in developing and evolving the mobile banking app's payment and transaction flows, working alongside the wider payments team.",
+      },
+      items: {
+        el: [
+          "Ροές πληρωμών",
+          "Μεταφορές χρημάτων",
+          "Transaction flows",
+          "Confirmation flows",
+          "OTP flows",
+          "Success / Failure flows",
+          "Επαναχρησιμοποιήσιμα payment components",
+          "Business logic γύρω από συναλλαγές",
+        ],
+        en: [
+          "Payment flows",
+          "Money transfers",
+          "Transaction flows",
+          "Confirmation flows",
+          "OTP flows",
+          "Success / failure flows",
+          "Reusable payment components",
+          "Transaction business logic",
+        ],
+      },
+    },
+    {
+      heading: { el: "IRIS Payments", en: "IRIS Payments" },
+      standing: { el: "Βασική περιοχή εξειδίκευσης", en: "Area of specialisation" },
+      summary: {
+        el: "Ανάπτυξη και συνεχής εξέλιξη του IRIS domain της εφαρμογής, ως μέλος της ομάδας που είναι υπεύθυνη για το σύνολο της λειτουργίας.",
+        en: "Development and ongoing evolution of the app's IRIS domain, as part of the team responsible for the overall functionality.",
+      },
+      items: {
+        el: [
+          "IRIS Online Payments",
+          "Συναλλαγές IRIS προς κινητό τηλέφωνο",
+          "Συναλλαγές IRIS προς ΑΦΜ",
+          "Δημιουργία IRIS QR Code",
+          "Add to Wallet IRIS QR Code",
+          "Deep linking και URL redirections",
+          "Navigation και business flows",
+          "UI/UX λειτουργιών IRIS",
+        ],
+        en: [
+          "IRIS Online Payments",
+          "IRIS transactions to mobile number",
+          "IRIS transactions to tax ID (ΑΦΜ)",
+          "IRIS QR code generation",
+          "Add to Wallet IRIS QR code",
+          "Deep linking and URL redirections",
+          "Navigation and business flows",
+          "IRIS UI/UX",
+        ],
+      },
+    },
+    {
+      heading: { el: "Κοινή Mobile Πλατφόρμα", en: "Shared Mobile Platform" },
+      standing: { el: "Βασικός συνεισφέρων", en: "Primary contributor" },
+      summary: {
+        el: "Ενεργή συμμετοχή στην ανάπτυξη και εξέλιξη κοινών βιβλιοθηκών που χρησιμοποιούνται σε όλη την εφαρμογή.",
+        en: "Active contribution to the development and evolution of shared libraries used across the application.",
+      },
+      items: {
+        el: [
+          "Shared UI Library",
+          "Shared Icon Library",
+          "Επαναχρησιμοποιήσιμα components",
+          "Υλοποίηση design system",
+          "Τυποποίηση components",
+          "Συνέπεια στο mobile UI",
+        ],
+        en: [
+          "Shared UI Library",
+          "Shared Icon Library",
+          "Reusable components",
+          "Design system implementation",
+          "Component standardisation",
+          "Mobile UI consistency",
+        ],
+      },
+    },
+  ],
+  generalContribution: {
+    el: "Πέρα από αυτές τις εξειδικευμένες περιοχές, συμμετέχω ενεργά στην ανάπτυξη ολόκληρης της εφαρμογής mobile banking — εργαζόμενος σε διαφορετικούς επιχειρησιακούς τομείς, σε συνεργασία με μεγαλύτερη ομάδα μηχανικών.",
+    en: "Beyond these areas of specialisation, I actively contribute to the development of the mobile banking application as a whole — working across different business domains, in collaboration with a larger engineering team.",
+  },
+  expertiseAreas: [
+    {
+      heading: { el: "Enterprise Mobile Banking", en: "Enterprise Mobile Banking" },
+      tags: ["Mobile Banking", "Enterprise Applications", "Enterprise Frontend Development"],
+    },
+    {
+      heading: { el: "Πληρωμές & Συναλλαγές", en: "Payments & Transactions" },
+      tags: ["Payments", "Transactions", "IRIS Payments", "Business Logic"],
+    },
+    {
+      heading: { el: "Κοινή Πλατφόρμα & UI Αρχιτεκτονική", en: "Shared Platform & UI Architecture" },
+      tags: [
+        "UI Architecture",
+        "Shared UI Library",
+        "Shared Icon Library",
+        "Reusable Components",
+        "Design Systems",
+      ],
+    },
+    {
+      heading: { el: "Μηχανική & Εμπειρία Χρήστη", en: "Engineering & UX" },
+      tags: ["React Native", "TypeScript", "Mobile UX", "Navigation Flows"],
+    },
+  ],
 
   keyFeatures: {
     el: [
@@ -134,8 +238,8 @@ export const nbgMobileBanking: Project = {
       en: "NBG Mobile Banking — Development contribution | SCALEQ",
     },
     description: {
-      el: "Case study συμμετοχής: ανάπτυξη λειτουργιών, UI και integrations για την εφαρμογή NBG Mobile Banking της Εθνικής Τράπεζας της Ελλάδος, ως React Native engineer σε ευρύτερη ομάδα.",
-      en: "Contribution case study: developing features, UI and integrations for the National Bank of Greece's NBG Mobile Banking app, as a React Native engineer within a wider team.",
+      el: "Case study συμμετοχής: εξειδίκευση σε πληρωμές, συναλλαγές, IRIS Payments και κοινή mobile πλατφόρμα για την εφαρμογή NBG Mobile Banking της Εθνικής Τράπεζας της Ελλάδος, ως React Native engineer σε ευρύτερη ομάδα.",
+      en: "Contribution case study: specialising in payments, transactions, IRIS Payments and the shared mobile platform for the National Bank of Greece's NBG Mobile Banking app, as a React Native engineer within a wider team.",
     },
   },
 };

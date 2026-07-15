@@ -39,6 +39,7 @@ export interface ProjectsUiContent {
     teamLabel: string;
     responsibilitiesLabel: string;
     contributionLabel: string;
+    expertiseLabel: string;
     challengeLabel: string;
     approachLabel: string;
     solutionLabel: string;
@@ -97,6 +98,7 @@ export const projectsUi: Record<Locale, ProjectsUiContent> = {
       teamLabel: "Πλαίσιο ομάδας",
       responsibilitiesLabel: "Τι αναλάβαμε",
       contributionLabel: "Συνοπτικά",
+      expertiseLabel: "Περιοχές Εξειδίκευσης",
       challengeLabel: "Η πρόκληση",
       approachLabel: "Η προσέγγιση",
       solutionLabel: "Η λύση",
@@ -153,6 +155,7 @@ export const projectsUi: Record<Locale, ProjectsUiContent> = {
       teamLabel: "Team context",
       responsibilitiesLabel: "What we took on",
       contributionLabel: "In summary",
+      expertiseLabel: "Areas of Expertise",
       challengeLabel: "The challenge",
       approachLabel: "The approach",
       solutionLabel: "The solution",

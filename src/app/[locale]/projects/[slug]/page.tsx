@@ -82,7 +82,12 @@ export default async function ProjectDetailPage({
   ].filter((f) => f.value);
 
   const hasContribution = Boolean(
-    project.role || project.teamContext || project.responsibilities?.[l]?.length || project.contributionSummary,
+    project.role ||
+      project.teamContext ||
+      project.responsibilities?.[l]?.length ||
+      project.contributionSummary ||
+      project.contributionAreas?.length ||
+      project.generalContribution,
   );
 
   const gallery = project.allowScreenshots
@@ -222,6 +227,9 @@ export default async function ProjectDetailPage({
                     <div>
                       <h2 className="eyebrow text-slate">{t.roleLabel}</h2>
                       <p className="mt-2 text-sm leading-relaxed">{project.role[l]}</p>
+                      {project.specialization && (
+                        <p className="mt-1 text-xs text-brass">{project.specialization[l]}</p>
+                      )}
                     </div>
                   )}
                   {project.teamContext && (
@@ -244,7 +252,69 @@ export default async function ProjectDetailPage({
                     </div>
                   )}
                 </div>
+
+                {project.contributionAreas && project.contributionAreas.length > 0 && (
+                  <div className="mt-10 space-y-8 border-t border-ink/10 pt-8">
+                    {project.contributionAreas.map((area) => (
+                      <div key={area.heading[l]}>
+                        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                          <h3 className="display text-lg">{area.heading[l]}</h3>
+                          {area.standing && (
+                            <span className="eyebrow text-brass">{area.standing[l]}</span>
+                          )}
+                        </div>
+                        {area.summary && (
+                          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
+                            {area.summary[l]}
+                          </p>
+                        )}
+                        <ul className="mt-3 flex flex-wrap gap-2">
+                          {area.items[l].map((item) => (
+                            <li
+                              key={item}
+                              className="eyebrow border border-ink/15 px-2.5 py-1 text-slate"
+                            >
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {project.generalContribution && (
+                  <p className="mt-8 max-w-2xl border-t border-ink/10 pt-8 text-sm leading-relaxed text-slate">
+                    {project.generalContribution[l]}
+                  </p>
+                )}
               </section>
+            </Reveal>
+          )}
+
+          {/* areas of expertise — grouped skill/domain chips */}
+          {project.expertiseAreas && project.expertiseAreas.length > 0 && (
+            <Reveal>
+              <div className="border-b border-ink/10 py-12">
+                <h2 className="display text-2xl">{t.expertiseLabel}</h2>
+                <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {project.expertiseAreas.map((group) => (
+                    <div key={group.heading[l]} className="border border-ink/10 bg-paper-2/40 p-6">
+                      <h3 className="eyebrow text-brass">{group.heading[l]}</h3>
+                      <ul className="mt-4 flex flex-wrap gap-2">
+                        {group.tags.map((tag) => (
+                          <li
+                            key={tag}
+                            className="border border-ink/15 px-3 py-1.5 font-mono text-xs text-slate transition-colors hover:border-brass hover:text-ink"
+                          >
+                            {tag}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </Reveal>
           )}
 

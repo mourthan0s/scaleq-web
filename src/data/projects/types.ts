@@ -89,6 +89,26 @@ export interface ProjectLinks {
   other?: { label: Localized<string>; url: string }[];
 }
 
+/**
+ * A labeled cluster of responsibilities within "Our contribution"
+ * (e.g. "Payments & Transactions", "IRIS Payments") — for collaborative
+ * projects where the contribution spans distinct domains worth naming
+ * individually, without implying sole ownership of any of them.
+ */
+export interface ContributionArea {
+  heading: Localized<string>;
+  /** Honest standing within the domain, e.g. "Core contributor" — never "owner" unless true. */
+  standing?: Localized<string>;
+  summary?: Localized<string>;
+  items: Localized<string[]>;
+}
+
+/** A tag-chip group for the "Areas of expertise" section. Tags are plain strings (shown as-is in both locales, like `technologies`). */
+export interface ExpertiseGroup {
+  heading: Localized<string>;
+  tags: string[];
+}
+
 export interface Project {
   /** Stable unique id (CMS-friendly); slug may change, id must not. */
   id: string;
@@ -123,12 +143,20 @@ export interface Project {
 
   /** "My role / our role" — REQUIRED for collaborative projects. */
   role?: Localized<string>;
+  /** Short line under the role, e.g. "Specialisation: Payments & Transactions". */
+  specialization?: Localized<string>;
   /** Team setting: size/structure of the wider team, where it existed. */
   teamContext?: Localized<string>;
   /** Concrete things SCALEQ was responsible for. */
   responsibilities?: Localized<string[]>;
   /** One-paragraph summary of the contribution — headline of the role section. */
   contributionSummary?: Localized<string>;
+  /** Detailed, domain-labeled breakdown of the contribution — richer alternative/addition to `responsibilities`. */
+  contributionAreas?: ContributionArea[];
+  /** Short closing paragraph on contribution beyond the specialised areas above. */
+  generalContribution?: Localized<string>;
+  /** Grouped skill/domain chips summarising expertise on this project — rendered as its own section. */
+  expertiseAreas?: ExpertiseGroup[];
 
   challenge?: Localized<string>;
   approach?: Localized<string>;
