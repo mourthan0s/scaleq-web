@@ -17,7 +17,7 @@ export const nbgNext: Project = {
   id: "nbg-next",
   slug: "nbg-next",
   isSample: false,
-  featured: false,
+  featured: true,
   order: 12,
 
   title: {

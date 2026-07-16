@@ -106,12 +106,12 @@ export const projectsPage: Record<Locale, IndexPageContent & {
     meta: {
       title: "Έργα & Case Studies | SCALEQ",
       description:
-        "Ενδεικτικά σενάρια έργων της SCALEQ: πλατφόρμες λειτουργίας, client portals και e-commerce με αυτοματοποιημένες ροές — από το πρόβλημα έως το αποτέλεσμα.",
+        "Πραγματικά έργα της SCALEQ: πλατφόρμες λειτουργίας, client portals και e-commerce με αυτοματοποιημένες ροές — από το πρόβλημα έως το αποτέλεσμα.",
     },
     eyebrow: "Έργα",
     heading: "Από το πρόβλημα στο σύστημα.",
     intro:
-      "Τα παρακάτω είναι ενδεικτικά σενάρια που δείχνουν τον τρόπο σκέψης και υλοποίησής μας. Πραγματικά case studies θα δημοσιεύονται εδώ με τη σύμφωνη γνώμη των πελατών μας.",
+      "Λίγα, δυνατά case studies όπου σχεδιάσαμε και υλοποιήσαμε ολόκληρο το σύστημα, και μία ευρύτερη λίστα επαγγελματικών συνεργασιών σε πραγματικά websites και e-shops.",
     sampleNotice: "Ενδεικτικό σενάριο — παρουσιάζει τη μεθοδολογία, όχι συγκεκριμένο πελάτη.",
     clientLabel: "Πελάτης",
     industryLabel: "Κλάδος",
@@ -129,12 +129,12 @@ export const projectsPage: Record<Locale, IndexPageContent & {
     meta: {
       title: "Projects & Case Studies | SCALEQ",
       description:
-        "Demonstration project scenarios from SCALEQ: operations platforms, client portals and e-commerce with automated flows — from problem to outcome.",
+        "Real SCALEQ work: operations platforms, client portals and e-commerce with automated flows — from problem to outcome.",
     },
     eyebrow: "Projects",
     heading: "From problem to system.",
     intro:
-      "The cases below are demonstration scenarios that show how we think and deliver. Real case studies will be published here with our clients' consent.",
+      "A few substantial case studies where we designed and built the whole system, plus a broader list of professional contributions to real websites and e-shops.",
     sampleNotice: "Demonstration scenario — it illustrates the methodology, not a specific client.",
     clientLabel: "Client",
     industryLabel: "Industry",

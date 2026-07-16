@@ -15,6 +15,8 @@ import {
 import { localeHref, type Locale } from "@/lib/i18n";
 import { projectsUi } from "@/content/projects-ui";
 import { ProjectCard } from "./ProjectCard";
+import { ContributionCard } from "./ContributionCard";
+import { LogoWall } from "./LogoWall";
 import { ProjectMedia } from "./ProjectMedia";
 import { CtaLink } from "@/components/ui/CtaLink";
 
@@ -198,11 +200,26 @@ export function ProjectsExplorer({ locale }: { locale: Locale }) {
         </section>
       )}
 
-      {/* grid */}
+      {/* Where I've contributed — pure logo wall, anchor-linked to the cards below (unfiltered view only) */}
+      {showSpotlight && gridProjects.length > 0 && (
+        <section className="mt-24 border-t border-ink/10 pt-16" aria-label={t.listing.trustedHeading}>
+          <p className="eyebrow mb-10 text-center text-slate sm:text-left">
+            {t.listing.trustedHeading}
+          </p>
+          <LogoWall projects={gridProjects} locale={locale} />
+        </section>
+      )}
+
+      {/* grid / professional contributions */}
       {gridProjects.length > 0 && (
-        <section className="mt-16" aria-label={t.listing.allLabel}>
-          {showSpotlight && <p className="eyebrow mb-10 text-slate">{t.listing.allLabel}</p>}
-          <motion.div layout={!reduce} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <section className="mt-20" aria-label={t.listing.allLabel}>
+          {showSpotlight && (
+            <div className="mb-10">
+              <p className="eyebrow text-slate">{t.listing.allLabel}</p>
+              <p className="mt-2 max-w-xl text-sm text-slate">{t.listing.contributionsIntro}</p>
+            </div>
+          )}
+          <motion.div layout={!reduce}>
             <AnimatePresence mode="popLayout" initial={false}>
               {gridProjects.map((p) => (
                 <motion.div
@@ -213,7 +230,13 @@ export function ProjectsExplorer({ locale }: { locale: Locale }) {
                   exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.97 }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <ProjectCard project={p} locale={locale} />
+                  {p.featured ? (
+                    <div className="py-4">
+                      <ProjectCard project={p} locale={locale} />
+                    </div>
+                  ) : (
+                    <ContributionCard project={p} locale={locale} />
+                  )}
                 </motion.div>
               ))}
             </AnimatePresence>

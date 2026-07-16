@@ -1,11 +1,29 @@
 import type { Locale } from "@/lib/i18n";
 import type { Project, ProjectCategory, ParticipationType } from "./types";
-import { sampleProjects } from "./samples";
 import { nbgMobileBanking } from "./entries/nbg-mobile-banking";
 import { nbgNext } from "./entries/nbg-next";
 import { pawera } from "./entries/pawera";
 import { mediaStromEcommerce } from "./entries/media-strom";
 import { orlikGallery } from "./entries/orlik-gallery";
+import { beepink } from "./entries/beepink";
+import { discoverAthensTours } from "./entries/discover-athens-tours";
+import { stihl } from "./entries/stihl";
+import { barberszone } from "./entries/barberszone";
+import { seajets } from "./entries/seajets";
+import { autoplus } from "./entries/autoplus";
+import { soEasy } from "./entries/so-easy";
+import { onisisConsulting } from "./entries/onisis-consulting";
+import { poep } from "./entries/poep";
+import { octopus } from "./entries/octopus";
+import { timeonline } from "./entries/timeonline";
+import { echoDeco } from "./entries/echo-deco";
+import { slimbites } from "./entries/slimbites";
+import { humanpet } from "./entries/humanpet";
+import { tasoulisJewellery } from "./entries/tasoulis-jewellery";
+import { tziolisMarine } from "./entries/tziolis-marine";
+import { theOmni } from "./entries/the-omni";
+import { ktenion } from "./entries/ktenion";
+import { jebelK9 } from "./entries/jebel-k9";
 
 export * from "./types";
 export * from "./taxonomy";
@@ -14,9 +32,20 @@ export * from "./taxonomy";
  * ─────────────────────────────────────────────────────────────────────────────
  * Project registry.
  *
+ * Two tiers, driven entirely by `featured`:
+ *  - featured: true  → full case study (Featured Projects spotlight + own
+ *    detail page with gallery/challenge/solution/outcome)
+ *  - featured: false → compact "Professional Contributions" entry (logo,
+ *    title, org, role, 1–2 sentences, tech — see ContributionCard)
+ *
  * Real projects: create one file per project under `entries/`
  * (e.g. `entries/my-project.ts` exporting a `Project`), import it here and
- * add it to the array below. Delete `sampleProjects` once real content lands.
+ * add it to the array below.
+ *
+ * `samples.ts` holds the original placeholder case studies used before real
+ * projects existed. They are intentionally NOT imported below now that the
+ * portfolio has real featured + contribution entries — kept in the codebase
+ * for reference/reuse, not for the live site.
  *
  * This file is the only place the rest of the app reads projects from,
  * which is also the future CMS seam: swap the array for a fetch and the
@@ -29,7 +58,25 @@ const registry: Project[] = [
   nbgNext,
   orlikGallery,
   mediaStromEcommerce,
-  ...sampleProjects,
+  beepink,
+  discoverAthensTours,
+  stihl,
+  barberszone,
+  seajets,
+  autoplus,
+  soEasy,
+  onisisConsulting,
+  poep,
+  octopus,
+  timeonline,
+  echoDeco,
+  slimbites,
+  humanpet,
+  tasoulisJewellery,
+  tziolisMarine,
+  theOmni,
+  ktenion,
+  jebelK9,
 ];
 
 /** All projects, sorted by manual display order. */

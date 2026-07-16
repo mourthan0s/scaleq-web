@@ -174,6 +174,12 @@ export interface Project {
 
   /** Product logo (path under /public) — shown on the detail hero if set. */
   logo?: string;
+  /**
+   * Backing tile the logo needs to stay legible — set "dark" when the source
+   * logo file is white/light-only (no colour version available). Defaults
+   * to a light tile.
+   */
+  logoBackground?: "light" | "dark";
   /** All imagery. Cover = images.find(kind === "cover"). */
   images: ProjectImage[];
   /** Named galleries (booking flow, admin panel, …) — render only when filled. */

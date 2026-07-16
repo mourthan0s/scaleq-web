@@ -21,6 +21,8 @@ export interface ProjectsUiContent {
   listing: {
     featuredLabel: string;
     allLabel: string;
+    trustedHeading: string;
+    contributionsIntro: string;
     sampleBadge: string;
     view: string;
   };
@@ -78,8 +80,11 @@ export const projectsUi: Record<Locale, ProjectsUiContent> = {
       },
     },
     listing: {
-      featuredLabel: "Επιλεγμένα",
-      allLabel: "Όλα τα έργα",
+      featuredLabel: "Έργα που Ξεχωρίζουν",
+      allLabel: "Επαγγελματικές Συνεργασίες",
+      trustedHeading: "Πού έχω συνεισφέρει",
+      contributionsIntro:
+        "Εταιρείες και προϊόντα στα οποία έχω συνεισφέρει, συνήθως ως μέλος ευρύτερων ομάδων.",
       sampleBadge: "Ενδεικτικό σενάριο",
       view: "Δείτε το έργο",
     },
@@ -135,8 +140,11 @@ export const projectsUi: Record<Locale, ProjectsUiContent> = {
       },
     },
     listing: {
-      featuredLabel: "Featured",
-      allLabel: "All projects",
+      featuredLabel: "Featured Projects",
+      allLabel: "Professional Contributions",
+      trustedHeading: "Where I've Contributed",
+      contributionsIntro:
+        "Companies and products I've contributed to, usually as part of larger teams.",
       sampleBadge: "Demonstration scenario",
       view: "View case",
     },
