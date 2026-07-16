@@ -106,7 +106,8 @@ export const contactContent: Record<Locale, ContactContent> = {
       { value: "other", label: "Άλλο" },
     ],
     budgets: [
-      { value: "lt-10k", label: "Έως 10.000 €" },
+      { value: "lt-5k", label: "Έως 5.000 €" },
+      { value: "5k-10k", label: "Από 5.000 έως 10.000 €" },
       { value: "10k-25k", label: "10.000 – 25.000 €" },
       { value: "25k-60k", label: "25.000 – 60.000 €" },
       { value: "gt-60k", label: "Άνω των 60.000 €" },
@@ -180,7 +181,8 @@ export const contactContent: Record<Locale, ContactContent> = {
       { value: "other", label: "Other" },
     ],
     budgets: [
-      { value: "lt-10k", label: "Up to €10,000" },
+      { value: "lt-5k", label: "Up to €5,000" },
+      { value: "5k-10k", label: "€5,000 – €10,000" },
       { value: "10k-25k", label: "€10,000 – €25,000" },
       { value: "25k-60k", label: "€25,000 – €60,000" },
       { value: "gt-60k", label: "Over €60,000" },
