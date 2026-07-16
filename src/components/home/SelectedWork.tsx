@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { localeHref, type Locale } from "@/lib/i18n";
 import { homeContent } from "@/content/home";
@@ -44,6 +45,17 @@ export function SelectedWork({ locale }: { locale: Locale }) {
                   <ProjectMedia project={p} locale={locale} />
                 </Link>
                 <div>
+                  {p.logo && (
+                    <div className="mb-5 flex h-12 w-32 items-center justify-start">
+                      <Image
+                        src={p.logo}
+                        alt={p.organization[locale]}
+                        width={200}
+                        height={80}
+                        className="h-full w-auto max-w-full object-contain object-left"
+                      />
+                    </div>
+                  )}
                   <div className="mb-4 flex flex-wrap gap-2">
                     <span className="eyebrow inline-block border border-ink/20 px-3 py-1.5 text-slate">
                       {participationInfo[p.participation].label[locale]}

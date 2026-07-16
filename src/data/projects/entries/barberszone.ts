@@ -1,10 +1,13 @@
 import type { Project } from "../types";
 
 /**
- * BarbersZone — collaborative website work.
+ * BarbersZone — end-to-end platform build.
  * Public grounding: official site https://barberszone.gr/ (WordPress,
- * confirmed via wp-content asset paths). Kept intentionally compact — this
- * is a Professional Contributions entry, not a full case study.
+ * confirmed via wp-content asset paths), which itself describes "partnered
+ * barbershops" — i.e. a booking platform/brand serving multiple locations,
+ * not a single shop's site. Built entirely by our team. Kept intentionally
+ * compact — this is a Professional Contributions entry, not a full case
+ * study.
  */
 export const barberszone: Project = {
   id: "barberszone",
@@ -15,22 +18,22 @@ export const barberszone: Project = {
 
   title: { el: "BarbersZone", en: "BarbersZone" },
   shortDescription: {
-    el: "Κατάστημα κομμωτηρίου ανδρών (barber shop) με online ραντεβού.",
-    en: "Men's barber shop with online appointment booking.",
+    el: "Πλατφόρμα και brand για κομμωτήρια ανδρών, με online ραντεβού για δίκτυο συνεργαζόμενων καταστημάτων.",
+    en: "Platform and brand for men's barbershops, with online booking for a network of partnered locations.",
   },
 
   organization: { el: "BarbersZone", en: "BarbersZone" },
   category: "website",
-  participation: "collaborative",
+  participation: "end-to-end",
   industry: { el: "Ομορφιά & Αισθητική", en: "Beauty & Aesthetics" },
   industryKey: "beauty",
   period: "",
   status: "live",
 
-  role: { el: "Web Developer", en: "Web Developer" },
+  role: { el: "Web & Platform Developer", en: "Web & Platform Developer" },
   contributionSummary: {
-    el: "Συνέβαλα στην ανάπτυξη του website της επιχείρησης.",
-    en: "I contributed to the development of the business's website.",
+    el: "Σχεδιάσαμε και υλοποιήσαμε την πλατφόρμα εξ ολοκλήρου.",
+    en: "We designed and built the platform end to end.",
   },
 
   technologies: ["WordPress", "PHP", "JavaScript", "HTML", "CSS"],

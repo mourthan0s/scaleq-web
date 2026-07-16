@@ -29,8 +29,8 @@ export const echoDeco: Project = {
 
   role: { el: "Web Developer", en: "Web Developer" },
   contributionSummary: {
-    el: "Συνέβαλα στην ανάπτυξη του e-shop της επιχείρησης.",
-    en: "I contributed to the development of the business's e-shop.",
+    el: "Συμβάλαμε στην ανάπτυξη του e-shop της επιχείρησης.",
+    en: "We contributed to the development of the business's e-shop.",
   },
 
   technologies: ["OpenCart", "PHP", "JavaScript", "HTML", "CSS"],

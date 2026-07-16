@@ -29,8 +29,8 @@ export const beepink: Project = {
 
   role: { el: "WordPress Developer", en: "WordPress Developer" },
   contributionSummary: {
-    el: "Σχεδίασα και υλοποίησα το website της επιχείρησης εξ ολοκλήρου.",
-    en: "I designed and built the business's website end to end.",
+    el: "Σχεδιάσαμε και υλοποιήσαμε το website της επιχείρησης εξ ολοκλήρου.",
+    en: "We designed and built the business's website end to end.",
   },
 
   technologies: ["WordPress", "Elementor", "PHP", "JavaScript", "HTML", "CSS"],

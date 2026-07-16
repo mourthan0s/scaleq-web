@@ -63,8 +63,8 @@ export const nbgMobileBanking: Project = {
     en: "Member of the app's wider development team, working alongside engineers of multiple specialisations.",
   },
   contributionSummary: {
-    el: "Συμμετέχω ενεργά στην ανάπτυξη του NBG Mobile Banking ως μέλος της ομάδας ανάπτυξης, με εξειδίκευση στις ροές πληρωμών και συναλλαγών, στο IRIS domain και στην κοινή mobile πλατφόρμα της εφαρμογής — σε συνεργασία με μεγαλύτερη ομάδα μηχανικών.",
-    en: "I actively contribute to the development of NBG Mobile Banking as a member of its development team, specialising in payment and transaction flows, the IRIS domain and the app's shared mobile platform — in collaboration with a larger engineering team.",
+    el: "Συμμετέχουμε ενεργά στην ανάπτυξη του NBG Mobile Banking ως μέλος της ομάδας ανάπτυξης, με εξειδίκευση στις ροές πληρωμών και συναλλαγών, στο IRIS domain και στην κοινή mobile πλατφόρμα της εφαρμογής — σε συνεργασία με μεγαλύτερη ομάδα μηχανικών.",
+    en: "We actively contribute to the development of NBG Mobile Banking as a member of its development team, specialising in payment and transaction flows, the IRIS domain and the app's shared mobile platform — in collaboration with a larger engineering team.",
   },
   contributionAreas: [
     {
@@ -155,8 +155,8 @@ export const nbgMobileBanking: Project = {
     },
   ],
   generalContribution: {
-    el: "Πέρα από αυτές τις εξειδικευμένες περιοχές, συμμετέχω ενεργά στην ανάπτυξη ολόκληρης της εφαρμογής mobile banking — εργαζόμενος σε διαφορετικούς επιχειρησιακούς τομείς, σε συνεργασία με μεγαλύτερη ομάδα μηχανικών.",
-    en: "Beyond these areas of specialisation, I actively contribute to the development of the mobile banking application as a whole — working across different business domains, in collaboration with a larger engineering team.",
+    el: "Πέρα από αυτές τις εξειδικευμένες περιοχές, συμμετέχουμε ενεργά στην ανάπτυξη ολόκληρης της εφαρμογής mobile banking — εργαζόμενοι σε διαφορετικούς επιχειρησιακούς τομείς, σε συνεργασία με μεγαλύτερη ομάδα μηχανικών.",
+    en: "Beyond these areas of specialisation, we actively contribute to the development of the mobile banking application as a whole — working across different business domains, in collaboration with a larger engineering team.",
   },
   expertiseAreas: [
     {
@@ -205,6 +205,7 @@ export const nbgMobileBanking: Project = {
   technologies: ["React Native", "TypeScript", "JavaScript", "REST APIs"],
   platforms: ["iOS", "Android"],
 
+  logo: "/projects/nbg-mobile-banking/logo.png",
   images: [1, 2, 3, 4, 5, 6].map((i) => ({
     src: `/projects/nbg-mobile-banking/appstore-${i}.jpg`,
     alt: {
@@ -226,8 +227,8 @@ export const nbgMobileBanking: Project = {
   confidentiality: "public",
   allowScreenshots: true,
   disclaimer: {
-    el: "Το έργο αποτελεί προϊόν της Εθνικής Τράπεζας της Ελλάδος. Η παρουσίασή του αφορά αποκλειστικά τη δική μου επαγγελματική συμμετοχή στην ανάπτυξη συγκεκριμένων λειτουργιών ως μέλος της ομάδας ανάπτυξης. Όλα τα εμπορικά σήματα, λογότυπα και πνευματικά δικαιώματα ανήκουν στους αντίστοιχους ιδιοκτήτες.",
-    en: "This project is a product of the National Bank of Greece. Its presentation here concerns solely my professional contribution to the development of specific features as a member of the development team. All trademarks, logos and copyrights belong to their respective owners.",
+    el: "Το έργο αποτελεί προϊόν της Εθνικής Τράπεζας της Ελλάδος. Η παρουσίασή του αφορά αποκλειστικά τη δική μας επαγγελματική συμμετοχή στην ανάπτυξη συγκεκριμένων λειτουργιών ως μέλος της ομάδας ανάπτυξης. Όλα τα εμπορικά σήματα, λογότυπα και πνευματικά δικαιώματα ανήκουν στους αντίστοιχους ιδιοκτήτες.",
+    en: "This project is a product of the National Bank of Greece. Its presentation here concerns solely our professional contribution to the development of specific features as a member of the development team. All trademarks, logos and copyrights belong to their respective owners.",
   },
 
   relatedServices: ["mobile-development", "systems-integration", "technology-partnership"],

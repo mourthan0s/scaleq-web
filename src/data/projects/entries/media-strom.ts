@@ -81,8 +81,8 @@ export const mediaStromEcommerce: Project = {
     ],
   },
   contributionSummary: {
-    el: "Συμμετείχα στην ανάπτυξη και επέκταση του e-commerce οικοσυστήματος της Media Strom — με custom WordPress plugins, WooCommerce λειτουργίες, integrations και backend εργασία — ως μέλος της ομάδας ανάπτυξης, πάνω σε σύστημα σε πλήρη παραγωγική λειτουργία.",
-    en: "I contributed to the development and extension of Media Strom's e-commerce ecosystem — with custom WordPress plugins, WooCommerce functionality, integrations and backend work — as a member of the development team, on a system in full production use.",
+    el: "Συμμετείχαμε στην ανάπτυξη και επέκταση του e-commerce οικοσυστήματος της Media Strom — με custom WordPress plugins, WooCommerce λειτουργίες, integrations και backend εργασία — ως μέλος της ομάδας ανάπτυξης, πάνω σε σύστημα σε πλήρη παραγωγική λειτουργία.",
+    en: "We contributed to the development and extension of Media Strom's e-commerce ecosystem — with custom WordPress plugins, WooCommerce functionality, integrations and backend work — as a member of the development team, on a system in full production use.",
   },
 
   keyFeatures: {
@@ -109,6 +109,7 @@ export const mediaStromEcommerce: Project = {
   technologies: ["WordPress", "WooCommerce", "PHP", "JavaScript", "HTML", "CSS", "MySQL"],
   platforms: ["Web", "E-commerce"],
 
+  logo: "/projects/media-strom/logo.png",
   images: [
     {
       src: "/projects/media-strom/home.jpg",
@@ -153,8 +154,8 @@ export const mediaStromEcommerce: Project = {
   confidentiality: "public",
   allowScreenshots: true,
   disclaimer: {
-    el: "Το έργο αποτελεί ιδιοκτησία της Media Strom. Η παρουσίασή του αφορά αποκλειστικά τη δική μου συμμετοχή στην ανάπτυξη συγκεκριμένων λειτουργιών ως μέλος της ομάδας ανάπτυξης. Όλα τα trademarks και copyrights ανήκουν στους αντίστοιχους ιδιοκτήτες.",
-    en: "This project is the property of Media Strom. Its presentation here concerns solely my contribution to the development of specific functionality as a member of the development team. All trademarks and copyrights belong to their respective owners.",
+    el: "Το έργο αποτελεί ιδιοκτησία της Media Strom. Η παρουσίασή του αφορά αποκλειστικά τη δική μας συμμετοχή στην ανάπτυξη συγκεκριμένων λειτουργιών ως μέλος της ομάδας ανάπτυξης. Όλα τα trademarks και copyrights ανήκουν στους αντίστοιχους ιδιοκτήτες.",
+    en: "This project is the property of Media Strom. Its presentation here concerns solely our contribution to the development of specific functionality as a member of the development team. All trademarks and copyrights belong to their respective owners.",
   },
 
   relatedServices: ["ecommerce", "systems-integration", "maintenance-optimization"],

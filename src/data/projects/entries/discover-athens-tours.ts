@@ -30,14 +30,14 @@ export const discoverAthensTours: Project = {
 
   role: { el: "WordPress Developer", en: "WordPress Developer" },
   contributionSummary: {
-    el: "Σχεδίασα και υλοποίησα το website και το σύστημα online κρατήσεων εξ ολοκλήρου.",
-    en: "I designed and built the website and its online booking system end to end.",
+    el: "Σχεδιάσαμε και υλοποιήσαμε το website και το σύστημα online κρατήσεων εξ ολοκλήρου.",
+    en: "We designed and built the website and its online booking system end to end.",
   },
 
   technologies: ["WordPress", "Elementor", "Amelia", "PHP", "JavaScript", "HTML", "CSS"],
   platforms: ["Web"],
 
-  logo: "/projects/logos/discoverathenstours.png",
+  logo: "/projects/logos/discoverathenstours.webp",
   images: [],
   fallbackMockup: "portal",
 

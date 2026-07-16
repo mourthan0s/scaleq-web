@@ -73,13 +73,14 @@ export const nbgNext: Project = {
     ],
   },
   contributionSummary: {
-    el: "Συμμετέχω στην ανάπτυξη του Next by NBG ως μέλος της ομάδας ανάπτυξης — υλοποιώντας νέες λειτουργίες, UI, business logic, reusable components, navigation flows και integrations στο React Native codebase. Το έργο αναπτύσσεται από μεγαλύτερη ομάδα μηχανικών· η παρουσίασή του εδώ αφορά αποκλειστικά τη δική μου συμμετοχή.",
-    en: "I contribute to the development of Next by NBG as a member of its development team — building new features, UI, business logic, reusable components, navigation flows and integrations in the React Native codebase. The app is developed by a larger engineering team; this presentation concerns solely my own contribution.",
+    el: "Συμμετέχουμε στην ανάπτυξη του Next by NBG ως μέλος της ομάδας ανάπτυξης — υλοποιώντας νέες λειτουργίες, UI, business logic, reusable components, navigation flows και integrations στο React Native codebase. Το έργο αναπτύσσεται από μεγαλύτερη ομάδα μηχανικών· η παρουσίασή του εδώ αφορά αποκλειστικά τη δική μας συμμετοχή.",
+    en: "We contribute to the development of Next by NBG as a member of its development team — building new features, UI, business logic, reusable components, navigation flows and integrations in the React Native codebase. The app is developed by a larger engineering team; this presentation concerns solely our own contribution.",
   },
 
   technologies: ["React Native", "TypeScript", "JavaScript", "Redux", "REST APIs"],
   platforms: ["iOS", "Android"],
 
+  logo: "/projects/nbg-next/logo.png",
   images: [1, 2, 3, 4, 5, 6].map((i) => ({
     src: `/projects/nbg-next/appstore-${i}.jpg`,
     alt: {
@@ -100,8 +101,8 @@ export const nbgNext: Project = {
   confidentiality: "public",
   allowScreenshots: true,
   disclaimer: {
-    el: "Το έργο αποτελεί προϊόν της Εθνικής Τράπεζας της Ελλάδος. Η παρουσίασή του αφορά αποκλειστικά τη δική μου επαγγελματική συμμετοχή ως μέλος της ομάδας ανάπτυξης. Όλα τα εμπορικά σήματα και πνευματικά δικαιώματα ανήκουν στους αντίστοιχους ιδιοκτήτες.",
-    en: "This project is a product of the National Bank of Greece. Its presentation here concerns solely my professional contribution as a member of the development team. All trademarks and copyrights belong to their respective owners.",
+    el: "Το έργο αποτελεί προϊόν της Εθνικής Τράπεζας της Ελλάδος. Η παρουσίασή του αφορά αποκλειστικά τη δική μας επαγγελματική συμμετοχή ως μέλος της ομάδας ανάπτυξης. Όλα τα εμπορικά σήματα και πνευματικά δικαιώματα ανήκουν στους αντίστοιχους ιδιοκτήτες.",
+    en: "This project is a product of the National Bank of Greece. Its presentation here concerns solely our professional contribution as a member of the development team. All trademarks and copyrights belong to their respective owners.",
   },
 
   relatedServices: ["mobile-development", "technology-partnership"],

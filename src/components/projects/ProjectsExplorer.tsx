@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
@@ -155,6 +156,17 @@ export function ProjectsExplorer({ locale }: { locale: Locale }) {
                   <ProjectMedia project={p} locale={locale} priority={i === 0} />
                 </Link>
                 <div>
+                  {p.logo && (
+                    <div className="mb-5 flex h-12 w-32 items-center justify-start">
+                      <Image
+                        src={p.logo}
+                        alt={p.organization[locale]}
+                        width={200}
+                        height={80}
+                        className="h-full w-auto max-w-full object-contain object-left"
+                      />
+                    </div>
+                  )}
                   <div className="flex flex-wrap gap-2">
                     <span className="eyebrow border border-ink/20 px-3 py-1.5 text-slate">
                       {participationInfo[p.participation].label[locale]}

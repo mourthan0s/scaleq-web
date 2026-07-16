@@ -26,12 +26,12 @@ export const orlikGallery: Project = {
     el: [
       "Η Orlik Gallery είναι contemporary art gallery με φυσικές τοποθεσίες στην Αθήνα: παρουσιάζει καλλιτέχνες και συλλογές πρωτότυπων έργων, με πιστοποιητικά αυθεντικότητας και παγκόσμια αποστολή, όπως αναφέρεται στο επίσημο website της.",
       "Το ψηφιακό της οικοσύστημα έπρεπε να κάνει δύο πράγματα ταυτόχρονα: να παρουσιάζει την τέχνη με τον σεβασμό και την οπτική ποιότητα που της αξίζει, και να λειτουργεί ως πραγματικό κανάλι πωλήσεων — από την ανακάλυψη ενός καλλιτέχνη έως την ολοκλήρωση μιας αγοράς.",
-      "Η τεχνική υλοποίηση του website και των custom λειτουργιών του έγινε εξ ολοκλήρου από εμένα — από το στήσιμο της πλατφόρμας έως τα εργαλεία διαχείρισης δεδομένων και τη συντήρηση σε παραγωγή. Το brand, τα έργα τέχνης και το φωτογραφικό υλικό ανήκουν στη gallery και τους καλλιτέχνες της.",
+      "Η τεχνική υλοποίηση του website και των custom λειτουργιών του έγινε εξ ολοκλήρου από εμάς — από το στήσιμο της πλατφόρμας έως τα εργαλεία διαχείρισης δεδομένων και τη συντήρηση σε παραγωγή. Το brand, τα έργα τέχνης και το φωτογραφικό υλικό ανήκουν στη gallery και τους καλλιτέχνες της.",
     ],
     en: [
       "Orlik Gallery is a contemporary art gallery with physical locations in Athens: it represents artists and collections of original works, with certificates of authenticity and worldwide shipping, as stated on its official website.",
       "Its digital ecosystem had to do two things at once: present art with the respect and visual quality it deserves, and operate as a real sales channel — from discovering an artist to completing a purchase.",
-      "The technical delivery of the website and its custom functionality was carried out entirely by me — from platform build to data-management tooling and production maintenance. The brand, the artworks and the photography belong to the gallery and its artists.",
+      "The technical delivery of the website and its custom functionality was carried out entirely by us — from platform build to data-management tooling and production maintenance. The brand, the artworks and the photography belong to the gallery and its artists.",
     ],
   },
 
@@ -74,8 +74,8 @@ export const orlikGallery: Project = {
     ],
   },
   contributionSummary: {
-    el: "Υλοποίησα και διαμόρφωσα ολόκληρη την ψηφιακή πλατφόρμα της Orlik Gallery — website, e-commerce και custom tooling — και τη συντηρώ ως ζωντανό σύστημα σε παραγωγή.",
-    en: "I built and shaped Orlik Gallery's entire digital platform — website, e-commerce and custom tooling — and maintain it as a live production system.",
+    el: "Υλοποιήσαμε και διαμορφώσαμε ολόκληρη την ψηφιακή πλατφόρμα της Orlik Gallery — website, e-commerce και custom tooling — και τη συντηρούμε ως ζωντανό σύστημα σε παραγωγή.",
+    en: "We built and shaped Orlik Gallery's entire digital platform — website, e-commerce and custom tooling — and maintain it as a live production system.",
   },
 
   challenge: {
@@ -83,8 +83,8 @@ export const orlikGallery: Project = {
     en: "An online store for art doesn't sell “products” — it sells trust and aesthetics. The platform had to showcase every artwork and artist with editorial quality, support originals, prints and limited editions each with its own commercial logic, and remain easy to manage and visible to search engines as the catalogue grows.",
   },
   approach: {
-    el: "Επέλεξα WordPress και WooCommerce ως βάση — ώριμη, διαχειρίσιμη από τη gallery, επεκτάσιμη — με Elementor Pro για ευέλικτο premium layout και custom PHP εκεί όπου τα έτοιμα εργαλεία σταματούν: στη δομή του καταλόγου, στην παρουσίαση των προϊόντων και στη μαζική διαχείριση δεδομένων και metadata.",
-    en: "I chose WordPress and WooCommerce as the foundation — mature, manageable by the gallery, extensible — with Elementor Pro for flexible premium layouts and custom PHP where off-the-shelf tools stop: catalogue structure, product presentation and bulk data & metadata management.",
+    el: "Επιλέξαμε WordPress και WooCommerce ως βάση — ώριμη, διαχειρίσιμη από τη gallery, επεκτάσιμη — με Elementor Pro για ευέλικτο premium layout και custom PHP εκεί όπου τα έτοιμα εργαλεία σταματούν: στη δομή του καταλόγου, στην παρουσίαση των προϊόντων και στη μαζική διαχείριση δεδομένων και metadata.",
+    en: "We chose WordPress and WooCommerce as the foundation — mature, manageable by the gallery, extensible — with Elementor Pro for flexible premium layouts and custom PHP where off-the-shelf tools stop: catalogue structure, product presentation and bulk data & metadata management.",
   },
   solution: {
     el: "Ένα ενιαίο ψηφιακό οικοσύστημα: παρουσίαση καλλιτεχνών και συλλογών, θεματικές κατηγορίες έργων, online shop με πλήρη κατάλογο WooCommerce, σελίδες προϊόντων με παραλλαγές (πρωτότυπο, art print, limited edition) και variation swatches, καλάθι και checkout, editorial ενότητα News, σελίδες τοποθεσιών για τους φυσικούς χώρους, newsletter και πλήρως responsive εμπειρία.",
@@ -184,6 +184,7 @@ export const orlikGallery: Project = {
   ],
   platforms: ["Web", "E-commerce"],
 
+  logo: "/projects/orlik-gallery/logo.png",
   images: [
     {
       src: "/projects/orlik-gallery/home.jpg",

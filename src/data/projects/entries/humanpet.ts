@@ -29,8 +29,8 @@ export const humanpet: Project = {
 
   role: { el: "Web Developer", en: "Web Developer" },
   contributionSummary: {
-    el: "Συνέβαλα στην ανάπτυξη του website/e-shop της επιχείρησης.",
-    en: "I contributed to the development of the business's website/e-shop.",
+    el: "Συμβάλαμε στην ανάπτυξη του website/e-shop της επιχείρησης.",
+    en: "We contributed to the development of the business's website/e-shop.",
   },
 
   technologies: ["WordPress", "WooCommerce", "PHP", "JavaScript", "HTML", "CSS"],

@@ -29,8 +29,8 @@ export const jebelK9: Project = {
 
   role: { el: "Web Developer", en: "Web Developer" },
   contributionSummary: {
-    el: "Συνέβαλα στην ανάπτυξη του website της επιχείρησης.",
-    en: "I contributed to the development of the business's website.",
+    el: "Συμβάλαμε στην ανάπτυξη του website της επιχείρησης.",
+    en: "We contributed to the development of the business's website.",
   },
 
   technologies: ["WordPress", "PHP", "JavaScript", "HTML", "CSS"],
