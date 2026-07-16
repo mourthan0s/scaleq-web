@@ -73,8 +73,8 @@ WooCommerce platform claim:
 
 | Asset | Location | Used in |
 | --- | --- | --- |
+| SCALEQ logo (icon + wordmark), white-on-transparent | `public/brand/scaleq-logo-white.png` — recoloured to white and tightly cropped (Python/Pillow) from the official brand file supplied directly by SCALEQ (`SCALEQ-transparent_logo-v2.png`, July 2026), replacing the earlier interim placeholder wordmark. Rendered via `src/components/graphics/Logo.tsx`. © SCALEQ. | Header, footer |
 | "The Lattice" generative system visual | `src/components/graphics/LatticeCanvas.tsx` (Canvas 2D, code-generated) | Homepage hero, final CTA |
-| Interim SCALEQ wordmark (Q with stepped tail) | `src/components/graphics/Wordmark.tsx` (inline SVG) | Header, footer |
 | Capability diagrams (8 animated SVG variants) | `src/components/graphics/CapabilityDiagram.tsx` | Homepage "Capabilities" |
 | Operating-model system drawing (6-stage SVG) | `src/components/home/OperatingModel.tsx` | Homepage & approach narrative |
 | "Complexity → structure" organising dots scene | `src/components/home/ClarityScene.tsx` (SVG + Framer Motion) | Homepage SQ.00 section |

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { localeHref, alternateHref, type Locale } from "@/lib/i18n";
 import { mainNav, ctaLabel } from "@/content/nav";
-import { Wordmark } from "@/components/graphics/Wordmark";
+import { Logo } from "@/components/graphics/Logo";
 
 /**
  * Strip any locale prefix so we always work with the locale-agnostic path.
@@ -61,10 +61,10 @@ export function Header({ locale }: { locale: Locale }) {
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8 lg:h-20 lg:px-10">
         <Link
           href={localeHref(locale, "/")}
-          className="text-[15px] text-paper hover:text-brass transition-colors"
+          className="opacity-100 transition-opacity hover:opacity-80"
           aria-label="SCALEQ — Home"
         >
-          <Wordmark />
+          <Logo priority className="h-[34px] lg:h-[42px]" />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label={locale === "el" ? "Κύριο μενού" : "Main menu"}>

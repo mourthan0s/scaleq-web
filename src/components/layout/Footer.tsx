@@ -2,7 +2,7 @@ import Link from "next/link";
 import { localeHref, type Locale } from "@/lib/i18n";
 import { mainNav, legalNav } from "@/content/nav";
 import { siteConfig } from "@/config/site";
-import { Wordmark } from "@/components/graphics/Wordmark";
+import { Logo } from "@/components/graphics/Logo";
 
 const strap: Record<Locale, string> = {
   el: "Στρατηγική, τεχνολογία και υλοποίηση για επιχειρήσεις που θέλουν να μεγαλώσουν με δομή.",
@@ -23,7 +23,7 @@ export function Footer({ locale }: { locale: Locale }) {
       <div className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Wordmark className="text-lg" />
+            <Logo className="h-10" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-steel">
               {strap[locale]}
             </p>
