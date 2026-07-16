@@ -7,20 +7,21 @@ import { internalNotificationEmail, autoReplyEmail } from "@/lib/email-templates
  * Contact form endpoint.
  *
  * Delivery: with RESEND_API_KEY set, every valid submission sends two
- * emails — a notification to CONTACT_TO_EMAIL (defaults to
- * info@scale-q.com) with reply-to set to the submitter for a one-click
- * reply, and an auto-reply to the submitter confirming receipt, in their
- * locale. Without RESEND_API_KEY, submissions are still accepted and
- * logged server-side so the form stays functional.
+ * emails — a notification to RESEND_REPLY_TO (defaults to info@scale-q.com)
+ * with reply-to set to the submitter for a one-click reply, and an
+ * auto-reply to the submitter confirming receipt (reply-to RESEND_REPLY_TO,
+ * so a reply lands in a human inbox, not the no-reply sender), in the
+ * submitter's locale. Without RESEND_API_KEY, submissions are still
+ * accepted and logged server-side so the form stays functional.
  *
  * CONTACT_WEBHOOK_URL remains available as an optional secondary forward
  * (CRM / automation) alongside email delivery.
  */
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
-const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL || "info@scale-q.com";
-const CONTACT_FROM_EMAIL =
-  process.env.CONTACT_FROM_EMAIL || "SCALEQ Website <no-reply@scale-q.com>";
+const RESEND_REPLY_TO = process.env.RESEND_REPLY_TO || "info@scale-q.com";
+const RESEND_FROM_EMAIL =
+  process.env.RESEND_FROM_EMAIL || "SCALEQ Website <no-reply@scale-q.com>";
 
 function labelFor(options: { value: string; label: string }[], value: string): string {
   return options.find((o) => o.value === value)?.label ?? value;
@@ -116,15 +117,16 @@ export async function POST(request: Request) {
 
       await Promise.all([
         resend.emails.send({
-          from: CONTACT_FROM_EMAIL,
-          to: CONTACT_TO_EMAIL,
+          from: RESEND_FROM_EMAIL,
+          to: RESEND_REPLY_TO,
           replyTo: data.email,
           subject: notification.subject,
           html: notification.html,
         }),
         resend.emails.send({
-          from: CONTACT_FROM_EMAIL,
+          from: RESEND_FROM_EMAIL,
           to: data.email,
+          replyTo: RESEND_REPLY_TO,
           subject: autoReply.subject,
           html: autoReply.html,
         }),
